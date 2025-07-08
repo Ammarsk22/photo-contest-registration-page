@@ -66,12 +66,16 @@ Edit
 3. 🧾 User clicks the button → Personalized PDF certificate is generated and downloaded.
 
 ---
-🖼️ Screenshots
+## 🖼️ Screenshots
 
-🧾 Registration Form
+### 🧾 Registration Form
 ![image](https://github.com/user-attachments/assets/f62d321b-8a32-4105-abad-d6dfddafc384)
 
-Certificate Download
+### 📄 Certificate Download Button
+![image](https://github.com/user-attachments/assets/1653a7a5-2d4b-46c8-be98-d0e8178a3782)
+
+### 🎓 Generated Certificate
+![certificate-template](https://github.com/user-attachments/assets/bf2ea0cd-fb8e-420a-95b7-1d92669e38aa)
 
 ---
 ## 🚀 Deployment Instructions
@@ -82,15 +86,17 @@ To run locally:
 git clone https://github.com/ammarsk22/photo-contest-registration-page.git
 cd photo-contest-registration-page
 Open index.html in your browser
-🌐 Live Demo
+```
+
+## 🌐 Live Demo
 🔗 Click Here to View on GitHub Pages
 
-✍️ Author
+## ✍️ Author
 Ammar Shaikh
 📧 ammarsk200422@gmail.com
 🌐 GitHub Profile
 
-📌 Future Enhancements
+## 📌 Future Enhancements
 🎯 Add certificate email delivery
 
 🗃️ Backend database for participant storage (e.g. Firebase)
@@ -99,5 +105,6 @@ Ammar Shaikh
 
 🥇 Auto-winner selection & special certificate
 
-📄 License
+## 📄 License
 This project is for educational and portfolio purposes only.
+
