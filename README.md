@@ -66,7 +66,14 @@ Edit
 3. 🧾 User clicks the button → Personalized PDF certificate is generated and downloaded.
 
 ---
+🖼️ Screenshots
 
+🧾 Registration Form
+![image](https://github.com/user-attachments/assets/f62d321b-8a32-4105-abad-d6dfddafc384)
+
+Certificate Download
+
+---
 ## 🚀 Deployment Instructions
 
 To run locally:
