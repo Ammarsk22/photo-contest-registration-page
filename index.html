@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Photo Contest Registration</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+
+  <style>
+    .delete-btn {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .delete-btn:hover {
+      background-color: #a71d2a;
+    }
+  </style>
+</head>
+<!-- Add this just after <body> or inside .container -->
+<body>
+  <div class="menu-container">
+    <div class="menu-icon" onclick="toggleMenu()">⋮</div>
+    <div class="menu-dropdown" id="menuDropdown">
+      <div onclick="showHelp()">Help</div>
+    </div>
+  </div>
+
+<body>
+
+  <div class="container">
+    <h1>Photo Contest Registration Form</h1>
+
+    <form class="registration-form">
+      <label>Full Name:</label>
+      <input type="text" name="fullname" required>
+
+<label>Email Address:</label>
+<div style="display: flex; align-items: center;">
+  <input type="text" name="emailUser" required placeholder="Enter Your Gmail" style="flex: 1;" />
+  <span style="margin-left: 5px;">@gmail.com</span>
+</div>
+
+<label>Phone Number:</label>
+<div style="display: flex; gap: 10px;">
+  <select name="countryCode" required style="width: 30%;">
+    <option value="+91">🇮🇳 +91</option>
+    <option value="+1">🇺🇸 +1</option>
+    <option value="+44">🇬🇧 +44</option>
+    <option value="+61">🇦🇺 +61</option>
+    <option value="+81">🇯🇵 +81</option>
+    <option value="+971">🇦🇪 +971</option>
+    <option value="+92">🇵🇰 +92</option>
+    <option value="+880">🇧🇩 +880</option>
+    <option value="+977">🇳🇵 +977</option>
+    <option value="+94">🇱🇰 +94</option>
+    <!-- Aap aur bhi codes add kar sakte ho -->
+  </select>
+  <input type="tel" name="phone" required placeholder="Enter number" style="flex: 1;">
+</div>
+
+<label>Age:</label>
+<input type="number" name="age" min="18" max="100" required>
+
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option value="">Select</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Address:</label>
+      <input type="text" name="address" required>
+
+      <label>City:</label>
+      <input type="text" name="city" required>
+
+<label>State:</label>
+<select name="state" required>
+  <option value="">Select State</option>
+  <option value="Andhra Pradesh">Andhra Pradesh</option>
+  <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+  <option value="Assam">Assam</option>
+  <option value="Bihar">Bihar</option>
+  <option value="Chhattisgarh">Chhattisgarh</option>
+  <option value="Goa">Goa</option>
+  <option value="Gujarat">Gujarat</option>
+  <option value="Haryana">Haryana</option>
+  <option value="Himachal Pradesh">Himachal Pradesh</option>
+  <option value="Jharkhand">Jharkhand</option>
+  <option value="Karnataka">Karnataka</option>
+  <option value="Kerala">Kerala</option>
+  <option value="Madhya Pradesh">Madhya Pradesh</option>
+  <option value="Maharashtra">Maharashtra</option>
+  <option value="Manipur">Manipur</option>
+  <option value="Meghalaya">Meghalaya</option>
+  <option value="Mizoram">Mizoram</option>
+  <option value="Nagaland">Nagaland</option>
+  <option value="Odisha">Odisha</option>
+  <option value="Punjab">Punjab</option>
+  <option value="Rajasthan">Rajasthan</option>
+  <option value="Sikkim">Sikkim</option>
+  <option value="Tamil Nadu">Tamil Nadu</option>
+  <option value="Telangana">Telangana</option>
+  <option value="Tripura">Tripura</option>
+  <option value="Uttar Pradesh">Uttar Pradesh</option>
+  <option value="Uttarakhand">Uttarakhand</option>
+  <option value="West Bengal">West Bengal</option>
+  <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+  <option value="Chandigarh">Chandigarh</option>
+  <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+  <option value="Delhi">Delhi</option>
+  <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+  <option value="Ladakh">Ladakh</option>
+  <option value="Lakshadweep">Lakshadweep</option>
+  <option value="Puducherry">Puducherry</option>
+</select>
+
+     <label>Country:</label>
+     <select name="country" required>
+     <option value="">Select Country</option>
+     <option value="India">India</option>
+     <option value="United States">United States</option>
+     <option value="United Kingdom">United Kingdom</option>
+     <option value="Canada">Canada</option>
+     <option value="Australia">Australia</option>
+     <option value="Germany">Germany</option>
+     <option value="France">France</option>
+     <option value="Japan">Japan</option>
+     <option value="China">China</option>
+     <option value="Brazil">Brazil</option>
+     <option value="South Africa">South Africa</option>
+     <option value="Pakistan">Pakistan</option>
+     <option value="Bangladesh">Bangladesh</option>
+     <option value="Nepal">Nepal</option>
+     <option value="Sri Lanka">Sri Lanka</option>
+     <option value="Russia">Russia</option>
+     <option value="Mexico">Mexico</option>
+     <option value="Italy">Italy</option>
+     <option value="Spain">Spain</option>
+     <option value="Other">Other</option>
+     </select>
+
+      <label>Postal Code:</label>
+      <input type="text" name="zipcode" required>
+
+<label>Photo Category:</label>
+<select name="category" required>
+  <option value="">Choose</option>
+  <option>Nature</option>
+  <option>Wildlife</option>
+  <option>Street</option>
+  <option>Portrait</option>
+  <option>Abstract</option>
+  <option>Travel</option>
+  <option>Architecture</option>
+  <option>Landscape</option>
+  <option>Macro</option>
+  <option>Astrophotography</option>
+  <option>Sports</option>
+  <option>Documentary</option>
+  <option>Underwater</option>
+  <option>Black and White</option>
+  <option>Fashion</option>
+  <option>Event</option>
+  <option>Still Life</option>
+  <option>Drone Photography</option>
+  <option>Food</option>
+  <option>Creative/Conceptual</option>
+</select>
+
+      <label>Photo Title:</label>
+      <input type="text" name="phototitle" required>
+
+      <label>Photo Description:</label>
+      <textarea name="description" rows="3"></textarea>
+
+      <label>Upload Photo:</label>
+      <input type="file" name="photo" accept="image/*" required>
+      <img id="photoPreview" src="" alt="Photo Preview" style="display:none; max-width: 200px; margin-top: 10px; border: 1px solid #ccc; border-radius: 5px;">
+
+      <div class="terms-section">
+      <label class="terms-label">
+      <input type="checkbox" id="terms" name="terms" required>
+      <span>I agree to the <a href="#" target="_blank">terms and conditions</a>.</span>
+      </label>
+      </div>
+
+
+      <button type="submit">Submit Registration</button>
+    </form>
+<div style="text-align:center; margin-top: 20px;">
+  <button id="downloadCertificateBtn" style="display:none; background-color: green; color: white; padding: 10px 20px; border-radius: 8px; border: none; font-size: 16px;">
+    Download Certificate
+  </button>
+</div>
+
+
+    <h2>Registered Participants</h2>
+    <table class="participants-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Category</th>
+          <th>Photo Title</th>
+          <th>Action</th> <!-- NEW HEADER for Delete -->
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Static rows can be left out or JS can generate them -->
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+  <div id="successMessage" style="display:none; color: green; margin-top: 15px; font-weight: bold;">
+  Registration successful! Thank you for participating.
+</div>
+
+
+
+ <script>
+  const form = document.querySelector('.registration-form');
+  const tableBody = document.querySelector('.participants-table tbody');
+  const successMessage = document.getElementById('successMessage'); // Success message element
+
+function addParticipantToTable(data) {
+  const newRow = document.createElement('tr');
+  newRow.innerHTML = `
+    <td>${data.name}</td>
+    <td>${data.email}</td>
+    <td>${data.category}</td>
+    <td>${data.title}</td>
+    <td><button class="delete-btn">Delete</button></td>
+  `;
+
+  newRow.querySelector('.delete-btn').addEventListener('click', function () {
+    if (confirm("Are you sure you want to delete this participant?")) {
+      newRow.remove();
+      saveParticipants(); // LocalStorage update
+    }
+  });
+
+  tableBody.appendChild(newRow);
+}
+function saveParticipants() {
+  const rows = tableBody.querySelectorAll("tr");
+  const data = [];
+
+  rows.forEach(row => {
+    const cols = row.querySelectorAll("td");
+    if (cols.length >= 4) {
+      data.push({
+        name: cols[0].textContent,
+        email: cols[1].textContent,
+        category: cols[2].textContent,
+        title: cols[3].textContent
+      });
+    }
+  });
+
+  localStorage.setItem("participants", JSON.stringify(data));
+}
+function loadParticipants() {
+  const savedParticipants = JSON.parse(localStorage.getItem("participants") || "[]");
+  savedParticipants.forEach(data => {
+    addParticipantToTable(data);
+  });
+}
+
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    // Get values
+    const name = form.fullname.value.trim();
+    const emailUser = form.emailUser ? form.emailUser.value.trim() : form.email.value.trim();
+    const email = emailUser + (form.emailUser ? "@gmail.com" : "");
+    const category = form.category.value;
+    const title = form.phototitle.value.trim();
+    const phone = form.phone.value.trim();
+    const photoInput = form.photo;
+    const age = parseInt(form.age.value);
+
+    // Phone number validation: Must start with + and digits, total length at least 10 digits after country code
+// Change this
+// const phone = form.phone.value.trim();
+// const phoneRegex = /^\+\d{1,3}\s?\d{7,14}$/;
+
+// To this:
+const countryCode = form.countryCode.value;
+const phoneNumber = form.phone.value.trim();
+const fullPhone = countryCode + " " + phoneNumber;
+
+const phoneRegex = /^\+\d{1,3}\s?\d{7,14}$/;
+if (!phoneRegex.test(fullPhone)) {
+  alert("Please enter a valid phone number. Example: +91 9876543210");
+  return;
+}
+
+
+    // Photo file validation - size max 5MB
+    if (photoInput.files.length === 0) {
+      alert("Please upload a photo.");
+      return;
+    }
+    const photoFile = photoInput.files[0];
+    const maxSizeMB = 5;
+    if (photoFile.size > maxSizeMB * 1024 * 1024) {
+      alert("Photo size should not exceed 5MB.");
+      return;
+    }
+
+    // Age validation (already min=18 in HTML, but double check)
+    if (age < 18) {
+      alert("You must be at least 18 years old to register.");
+      return;
+    }
+
+    // If all validations pass, add row to table
+    const newRow = document.createElement('tr');
+    newRow.innerHTML = `
+      <td>${name}</td>
+      <td>${email}</td>
+      <td>${category}</td>
+      <td>${title}</td>
+      <td><button class="delete-btn">Delete</button></td>
+    `;
+
+    newRow.querySelector('.delete-btn').addEventListener('click', function () {
+      if (confirm("Are you sure you want to delete this participant?")) {
+        newRow.remove();
+      }
+      saveParticipants(); // Delete ke baad localStorage update karega
+
+    });
+
+    tableBody.appendChild(newRow);
+    saveParticipants(); // Data ko localStorage me save karega
+   form.reset();
+photoPreview.style.display = 'none';
+photoPreview.src = '';
+
+
+    
+  // Store cert data and show button
+  localStorage.setItem("cert_name", name);
+  localStorage.setItem("cert_category", category);
+  localStorage.setItem("cert_title", title);
+  document.getElementById("downloadCertificateBtn").style.display = "inline-block";
+
+  // Show success message
+    successMessage.style.display = 'block';
+
+    // Hide success message after 3 seconds
+    setTimeout(() => {
+      successMessage.style.display = 'none';
+    }, 3000);
+  });
+
+  const photoInput = form.photo; // form se photo input get kar rahe hain
+  const photoPreview = document.getElementById('photoPreview'); // preview img element
+
+  form.reset();
+photoPreview.style.display = 'none';
+photoPreview.src = '';
+
+  photoInput.addEventListener('change', function() {
+    const file = this.files[0];  // selected file le rahe hain
+    if (file) {
+      const reader = new FileReader();  // FileReader object create karo
+
+      reader.onload = function(e) {
+        photoPreview.src = e.target.result;  // image src set karo
+        photoPreview.style.display = 'block';  // img show karo
+      }
+
+      reader.readAsDataURL(file);  // file ko base64 URL me convert karo
+    } else {
+      photoPreview.src = "";  // agar file nahi hai to src empty karo
+      photoPreview.style.display = 'none';  // img hide karo
+    }
+  });
+
+  // Country aur State dropdown ko select karo
+  const countrySelect = document.querySelector('select[name="country"]');
+  const stateSelect = document.querySelector('select[name="state"]');
+
+  // Choices plugin ko initialize karo
+  new Choices(stateSelect, { searchEnabled: true, shouldSort: false });
+
+  loadParticipants(); // ✅ Call this to load saved participants on page load
+
+  function toggleMenu() {
+    document.getElementById("menuDropdown").classList.toggle("show");
+  }
+
+  function showHelp() {
+    alert("Fill out the form completely and upload your photo to register for the contest.");
+  }
+
+</script>
+
+
+<footer class="footer">
+  <p>&copy; 2024-2025 Ammar Shaikh | ammarsk200422@gmail.com</p>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+<script>
+document.getElementById("downloadCertificateBtn").addEventListener("click", async function () {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF('landscape');
+
+  const img = new Image();
+  img.src = 'images/certificate-template.jpg';
+
+  img.onload = function () {
+    doc.addImage(img, 'JPG', 0, 0, 297, 210);
+
+    const name = localStorage.getItem("cert_name") || "Participant";
+    const category = localStorage.getItem("cert_category") || "Category";
+    const title = localStorage.getItem("cert_title") || "";
+
+    // ✅ Name Position (fixed)
+    doc.setFont("Times", "bolditalic");
+    doc.setFontSize(32);
+    doc.text(name, 148, 130, null, null, "center");
+
+    // ✅ Category line (fixed)
+    doc.setFont("helvetica", "bold");
+    doc.setTextColor(210, 140, 35);
+    doc.setFontSize(16);
+    doc.text(`For participating in the "${category}" category`, 148, 155, null, null, "center");
+
+    // ✅ Appreciation line (fixed)
+    doc.setFont("helvetica", "normal");
+    doc.setTextColor(50, 50, 50);
+    doc.setFontSize(12);
+    doc.text("We appreciate your creative contribution and thank you for showcasing your talent in our contest.", 148, 170, null, null, "center");
+
+    doc.save(`${name}_Certificate.pdf`);
+  };
+});
+
+</script>
+</body>
+
+</html>
